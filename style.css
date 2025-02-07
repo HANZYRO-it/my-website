@@ -1,4 +1,4 @@
-/* Сброс стилей браузера */
+/* Общие стили для сайта */
 * {
     margin: 0;
     padding: 0;
@@ -7,92 +7,133 @@
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    line-height: 1.8;
+    background-color: #f8f9fa;
+    color: #222;
+    padding-top: 50px;
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
+    width: 85%;
+    max-width: 1100px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 header {
-    background-color: #333;
+    background-color: #222;
     color: white;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
+    /* Убираем fixed позиционирование */
+    /* position: fixed; */
+    width: 100%;
+    /* Убираем свойство top, которое держит шапку сверху */
+    /* top: 0; */
+    /* Убираем свойство left, которое фиксирует шапку слева */
+    /* left: 0; */
+    z-index: 1000;
 }
 
-header h1 {
-    font-size: 2.5rem;
-}
 
 nav ul {
     list-style: none;
+    padding-top: 5px;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: inline-block;
+    margin: 0 10px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #00aaff;
+    text-decoration: none;
 }
 
 .section {
-    padding: 40px 0;
+    padding: 60px 0;
+    text-align: center;
 }
 
 #about {
     background-color: #fff;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 2px solid #ddd;
 }
 
-#services {
-    background-color: #f9f9f9;
-    border-bottom: 1px solid #ccc;
+.video-category {
+    margin-bottom: 40px;
 }
+
+.video-category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.video-container iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 
 #contact {
     background-color: #fff;
+    border-top: 2px solid #ddd;
 }
 
 h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    font-weight: bold;
 }
 
 ul {
     list-style-type: none;
+    padding: 0;
 }
 
 ul li {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
 }
 
 a {
-    color: #333;
+    color: #0073e6;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 a:hover {
+    color: #005bb5;
     text-decoration: underline;
 }
 
+/* Стили для контактных ссылок */
+ul li a {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Стили для футера */
 footer {
-    background-color: #333;
+    background-color: #222;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     margin-top: 40px;
 }
